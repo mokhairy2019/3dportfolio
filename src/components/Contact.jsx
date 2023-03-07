@@ -27,6 +27,7 @@ const Contact = () => {
   };
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -35,7 +36,7 @@ const Contact = () => {
           from_name: form.name,
           to_name: "JavaScript Mastery",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "mokhairy.mahmoud@gmail.com",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -43,6 +44,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
+          console.log("Email sent successfully!");
           alert("Thank you. I will get back to you as soon as possible.");
 
           setForm({

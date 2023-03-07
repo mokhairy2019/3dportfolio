@@ -19,13 +19,14 @@ const ProjectCard = ({
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
-        className="bg-tertiary rounded-lg shadow-lg w-full sm:w[360px]"
-        options={{ max: 5, scale: 1., speed: 300 }}>
-        <div className="flex flex-col items-center justify-center p-4">
+        options={{ max: 5, scale: 1, speed: 300 }}
+        className="bg-tertiary rounded-2xl p-5 sm:w-[360px] w-full"
+        >
+        <div className="relative w-full h-[230px]">
           <img
             src={image}
             alt='project_image'
-            className="w-full h-48 object-cover rounded-lg shadow-lg"
+            className='w-full h-full object-cover rounded-2xl'
           />
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
             <div
